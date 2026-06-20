@@ -1,2 +1,40 @@
-# Autonomous-Chassis
-Custom autonomous mobile robot simulation bridging advanced 3D CAD with ROS 2. Features a complete hardware-to-software pipeline: translating a mechanical chassis into a URDF/Xacro kinematic tree and integrating it into Gazebo for hardware-in-the-loop simulation.
+# Autonomous Chassis: Hardware-in-the-Loop Simulation
+
+**Role:** R&D Mechatronics Engineer
+**Tech Stack:** ROS 2 (Humble), Gazebo, C++, Python, Advanced CAD
+
+---
+
+<div align="center">
+  <!-- TO DO: Upload a GIF of your robot moving in Gazebo here -->
+  <img src="insert_gazebo_simulation_gif.gif" alt="Robot Simulation GIF" width="800"/>
+</div>
+
+---
+
+### 🚀 Project Architecture
+This repository demonstrates a complete hardware-to-software pipeline for autonomous robotic systems. It details the transition of a custom-designed mechanical chassis from static 3D CAD models into a dynamic, physics-based simulation environment using ROS 2 and Gazebo.
+
+### ⚙️ Engineering Workflow
+
+1.  **Mechanical Design:** Custom chassis and drivetrain modeled emphasizing clearance management and realistic mass distribution.
+2.  **Kinematic Translation:** Parts exported as lightweight `.STL` meshes and integrated into a custom URDF/Xacro framework to establish the rigid body tree, joint limits, and inertia tensors.
+3.  **Simulation & Control:** Integration of the Gazebo Differential Drive plugin, allowing direct velocity control via ROS 2 `cmd_vel` topics and real-time visualization in RViz.
+
+### 🛠️ Build and Execution Instructions
+
+**Prerequisites:**
+*   Ubuntu 22.04 LTS
+*   ROS 2 Humble
+*   Gazebo / `gazebo_ros_pkgs`
+
+**Installation:**
+```bash
+# Clone the repository into your colcon workspace
+cd ~/ros2_ws/src
+git clone [https://github.com/SivakumarThirumurugan/autonomous_chassis_sim.git](https://github.com/SivakumarThirumurugan/autonomous_chassis_sim.git)
+
+# Build the workspace
+cd ~/ros2_ws
+colcon build --symlink-install
+source install/setup.bash
