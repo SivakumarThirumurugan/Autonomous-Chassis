@@ -7,7 +7,7 @@
 
 <div align="center">
   <!-- TO DO: Upload a GIF of your robot moving in Gazebo here -->
-  <img src="insert_gazebo_simulation_gif.gif" alt="Robot Simulation GIF" width="800"/>
+  <img src="Chassis_gif.gif" alt="Robot Simulation GIF" width="800"/>
 </div>
 
 ---
