@@ -27,6 +27,14 @@ This repository demonstrates a complete hardware-to-software pipeline for autono
 *   Ubuntu 22.04 LTS
 *   ROS 2 Humble
 *   Gazebo / `gazebo_ros_pkgs`
+---
+
+<div align="center">
+  <!-- TO DO: Upload a GIF of your robot moving in Gazebo here -->
+  <img src="autonomous_chassis_rviz.png" alt="Robot Simulation GIF" width="800"/>
+</div>
+
+---
 
 **Installation:**
 ```bash
