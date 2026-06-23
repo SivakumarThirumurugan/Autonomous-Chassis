@@ -19,7 +19,7 @@ This repository demonstrates a complete hardware-to-software pipeline for autono
 
 1.  **Mechanical Design:** Custom chassis and drivetrain modeled emphasizing clearance management and realistic mass distribution.
 2.  **Kinematic Translation:** Parts exported as lightweight `.STL` meshes and integrated into a custom URDF/Xacro framework to establish the rigid body tree, joint limits, and inertia tensors.
-3.  **Simulation & Control:** Integration of the Gazebo Differential Drive plugin, allowing direct velocity control via ROS 2 `cmd_vel` topics and real-time visualization in RViz.
+3.  **Simulation & Control:** Integration of the Gazebo Ackermann Steering Plugin (gazebo_ros_ackermann_drive), allowing direct velocity control via ROS 2 `cmd_vel` topics and real-time visualization in RViz.
 
 ### 🛠️ Build and Execution Instructions
 
