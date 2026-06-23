@@ -38,11 +38,15 @@ This repository demonstrates a complete hardware-to-software pipeline for autono
 
 **Installation:**
 ```bash
-# Clone the repository into your colcon workspace
-cd ~/ros2_ws/src
-git clone [https://github.com/SivakumarThirumurugan/autonomous_chassis_sim.git](https://github.com/SivakumarThirumurugan/autonomous_chassis_sim.git)
+# Create a clean ROS 2 workspace
+mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
+git clone https://github.com/SivakumarThirumurugan/Autonomous-Chassis.git
 
-# Build the workspace
+# Resolve dependencies and build
 cd ~/ros2_ws
+rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
+
+# Environment activation & launch
 source install/setup.bash
+ros2 launch autonomous_chassis_description display.launch.py
