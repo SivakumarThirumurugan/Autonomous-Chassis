@@ -1,7 +1,6 @@
 # Autonomous Chassis: Interactive Simulation Workspace
 
 **Role:** R&D Mechatronics Engineer
-**Tech Stack:** ROS 2 (Humble), Gazebo, C++, Python, Advanced CAD
 
 A functional ROS 2 and Gazebo simulation workspace featuring a custom-designed mechanical chassis equipped with dynamic steering joints, active perception sensors, and physical friction mapping.
 
@@ -63,3 +62,36 @@ Before building, install the required ROS-to-Gazebo environment communication br
 ```bash
 sudo apt update
 sudo apt install ros-jazzy-ros-gz ros-jazzy-ros-gz-bridge
+```
+
+
+### Workspace Installation Setup
+Execute these commands to prepare your local directory structure, download the source code, and run the compilation tools:
+
+```bash
+# Initialize a clean ROS 2 workspace environment
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+
+# Clone the repository source packages
+git clone [https://github.com/SivakumarThirumurugan/Autonomous-Chassis.git](https://github.com/SivakumarThirumurugan/Autonomous-Chassis.git)
+
+# Navigate back to workspace root and build the code links
+cd ~/ros2_ws
+colcon build --symlink-install
+
+# Activate the built workspace environment variables
+source install/setup.bash
+```
+### Launching the Simulation Environment
+To start the complete system—which initializes the Gazebo simulation window, runs the robot state publishers, opens the parameter bridge network, and loads your chassis model—run this single launch command:
+
+```bash
+ros2 launch autonomous_chassis_gazebo simulation.launch.py
+```
+### Verifying Results in RViz2
+To view the perception data streams shown in the project showcase images, open a separate terminal window, source the workspace, and run:
+```bash
+source ~/ros2_ws/install/setup.bash
+rviz2
+```
