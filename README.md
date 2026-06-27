@@ -7,7 +7,7 @@
 
 <div align="center">
   <!-- TO DO: Upload a GIF of your robot moving in Gazebo here -->
-  <img src="Chassis_gif.gif" alt="Robot Simulation GIF" width="800"/>
+  <img src="Resources/Videos/Chassis.gif" alt="Robot Simulation GIF" width="800"/>
 </div>
 
 ---
@@ -31,7 +31,7 @@ This repository demonstrates a complete hardware-to-software pipeline for autono
 
 <div align="center">
   <!-- TO DO: Upload a GIF of your robot moving in Gazebo here -->
-  <img src="autonomous_chassis_rviz.png" alt="Robot Simulation GIF" width="800"/>
+  <img src="Resources/Images/RC car Blue BG.png" alt="RC Car Render" width="800"/>
 </div>
 
 ---
