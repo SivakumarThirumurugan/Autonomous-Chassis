@@ -1,5 +1,6 @@
 # Autonomous Chassis: Interactive Simulation Workspace
-![ROS 2 CI](https://github.com/SivakumarThirumurugan/Autonomous-Chassis/actions/workflows/ros2_ci.yml/badge.svg)
+![ROS 2 CI](https://github.com/SivakumarThirumurugan/Autonomous-Chassis/actions/workflows/colcon-build.yml/badge.svg)
+
 **Role:** R&D Mechatronics Engineer
 
 A functional ROS 2 and Gazebo simulation workspace featuring a custom-designed mechanical chassis equipped with dynamic steering joints, active perception sensors, and physical friction mapping.
