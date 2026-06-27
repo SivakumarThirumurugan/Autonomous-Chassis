@@ -1,8 +1,29 @@
+# ROS 2 colcon build artifacts
 build/
 install/
 log/
+
+# ROS 2 generated files
 *.pyc
 __pycache__/
 *.egg-info/
-.vscode/
+
+# SolidWorks backup files
 *.swp
+*.swo
+~$*
+
+# VS Code
+.vscode/
+
+# Python
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+EOF
