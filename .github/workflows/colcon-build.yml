@@ -1,13 +1,39 @@
-name: ROS 2 Build Check
-on: [push, pull_request]
+name: ROS 2 CI Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   build:
     runs-on: ubuntu-24.04
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: ros-tooling/setup-ros@v0.7
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up ROS 2 Jazzy
+        uses: ros-tooling/setup-ros@v0.7
         with:
           required-ros-distributions: jazzy
-      - uses: ros-tooling/action-ros-ci@v0.3
-        with:
-          package-name: autonomous_chassis
+
+      - name: Install Gazebo bridge dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y ros-jazzy-ros-gz ros-jazzy-ros-gz-bridge
+
+      - name: Build workspace with colcon
+        shell: bash
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          mkdir -p ~/ros2_ws/src
+          cp -r . ~/ros2_ws/src/autonomous_chassis
+          cd ~/ros2_ws
+          colcon build --symlink-install
+
+      - name: Verify build success
+        run: |
+          source ~/ros2_ws/install/setup.bash
+          echo "Build completed successfully"
