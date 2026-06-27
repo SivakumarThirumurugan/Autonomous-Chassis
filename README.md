@@ -5,6 +5,17 @@
 A functional ROS 2 and Gazebo simulation workspace featuring a custom-designed mechanical chassis equipped with dynamic steering joints, active perception sensors, and physical friction mapping.
 
 **Tech Stack:** ROS 2 (Jazzy), Gazebo (Harmonic), Xacro/URDF, SolidWorks, RViz2, C++, Python
+<div align="center">
+  <img src="Resources/Videos/Chassis.gif" width="600"/>
+  
+  [![ROS 2](https://img.shields.io/badge/ROS2-Jazzy-blue)](https://docs.ros.org/en/jazzy/)
+  [![Gazebo](https://img.shields.io/badge/Gazebo-Harmonic-orange)](https://gazebosim.org/)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+  [![Python](https://img.shields.io/badge/Python-83%25-yellow)](https://python.org)
+</div>
+
+> Custom autonomous mobile robot simulation: from SolidWorks CAD → URDF/Xacro → 
+> Gazebo Harmonic physics simulation with live RViz2 sensor streams.
 
 ---
 
@@ -22,12 +33,6 @@ The chassis, suspension geometries, and steering linkages were designed from scr
   <img src="Resources/Images/RC car Blue BG.png" width="48%" alt="Chassis Render View 2" />
 </p>
 
-<p align="center">
-  <img src="Resources/Videos/Chassis.gif" width="65%" alt="Kinematic Assembly Rotation" />
-  <br>
-  <em>Figure 1: Joint center-axis rotation and kinematic coordinate validation.</em>
-</p>
-
 ### 2. ROS 2 & Gazebo Simulation Output
 These assets demonstrate the live tracking environment, verifying that the physical model communicates with the underlying ROS perception topics.
 
@@ -39,6 +44,8 @@ These assets demonstrate the live tracking environment, verifying that the physi
   <br>
   <em>Figure 2: Active TF coordinate tracking and live sensor streams inside RViz2.</em>
 </p>
+
+
 
 <p align="center">
   <img src="Resources/Images/RC car on Gazebo.png" width="48%" alt="Gazebo Spawning Interface" />
